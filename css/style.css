@@ -6,6 +6,20 @@
   font-weight: 400;
   font-style: normal;
 }
+@font-face {
+  font-family: Roboto;
+  font-display: swap;
+  src: url("../fonts/Roboto-Bold.woff2") format("woff2"), url("../fonts/Roboto-Bold.woff") format("woff");
+  font-weight: 700;
+  font-style: normal;
+}
+@font-face {
+  font-family: Roboto;
+  font-display: swap;
+  src: url("../fonts/Roboto-Regular.woff2") format("woff2"), url("../fonts/Roboto-Regular.woff") format("woff");
+  font-weight: 400;
+  font-style: normal;
+}
 .get-specialist::after, .main-nav .menu-item.menu-item-has-children > a::after, [class*=_icon-]:before {
   font-family: "icons";
   font-style: normal;
@@ -142,9 +156,13 @@ a:visited {
 
 a:hover {
   text-decoration: none;
-  color: var(--accent-color);
 }
 
+@media (hover: hover) {
+  a:hover {
+    color: var(--accent-color);
+  }
+}
 ul li {
   list-style: none;
 }
@@ -557,6 +575,9 @@ h5 {
 }
 .main-nav .menu-item.menu-item-has-children > a._spoller-active::after {
   transform: rotate(0);
+}
+.main-nav .menu-item.menu-item-has-children > a._spoller-active {
+  color: var(--accent-color);
 }
 @media (min-width: 1200px) and (hover: hover) {
   .main-nav .menu-item.menu-item-has-children > a:hover + .sub-menu {
@@ -1198,6 +1219,9 @@ h5 {
 }
 .navigation-slider__button_next img {
   transform: rotate(-90deg);
+}
+.navigation-slider .swiper-button-disabled {
+  background-color: var(--color-gray-light);
 }
 
 .example {
