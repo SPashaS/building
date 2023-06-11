@@ -5564,7 +5564,7 @@
         {},
         {
           iconLayout: "default#image",
-          iconImageHref: "../img/location.png",
+          iconImageHref: "img/location.png",
           iconImageSize: [80, 80],
           iconImageOffset: [-40, -70],
         }
