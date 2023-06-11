@@ -6,7 +6,10 @@
 	<meta charset="UTF-8">
 	<meta name="format-detection" content="telephone=no">
 	<!-- <style>body{opacity: 0;}</style> -->
-	<link rel="stylesheet" href="css/style.min.css?_v=20230611093059">
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap&_v=20230611131451" rel="stylesheet">
+	<link rel="stylesheet" href="css/style.min.css?_v=20230611131451">
 	<link rel="shortcut icon" href="favicon.ico">
 	<!-- <meta name="robots" content="noindex, nofollow"> -->
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -53,23 +56,20 @@
 							</button>
 							<nav class="header-menu__main-nav main-nav">
 								<ul class="main-nav__list">
-									<li class="main-nav__menu-item"><a href="#">О компании</a></li>
-									<li class="main-nav__menu-item"><a href="#">Проекты и цены</a></li>
-									<li class="main-nav__menu-item main-nav__menu-item_sub" data-spollers>
-										<a href="#">Доп. услуги</a>
-										<div class="main-nav__open-sub-menu" data-spoller>
-											<img src="img/icons/arrow.svg" alt="1">
-										</div>
-										<ul class="main-nav__sub-menu">
-											<li class="main-nav__menu-item"><a href="#">Подпункт 1</a></li>
-											<li class="main-nav__menu-item"><a href="#">Подпункт 2</a></li>
-											<li class="main-nav__menu-item"><a href="#">Подпункт 3</a></li>
+									<li class="menu-item"><a href="#">О компании</a></li>
+									<li class="menu-item"><a href="#">Проекты и цены</a></li>
+									<li class="menu-item menu-item-has-children" data-spollers="1200,max">
+										<a href="#" data-spoller>Доп. услуги <img src="img/icons/arrow.svg" alt="1"></a>
+										<ul class="sub-menu">
+											<li class="menu-item"><a href="#1">Подпункт 1</a></li>
+											<li class="menu-item"><a href="#2">Подпункт 2</a></li>
+											<li class="menu-item"><a href="#3">Подпункт 3</a></li>
 										</ul>
 									</li>
-									<li class="main-nav__menu-item"><a href="#">Скидки и акции</a></li>
-									<li class="main-nav__menu-item"><a href="#">Портфолио и отзывы</a></li>
-									<li class="main-nav__menu-item"><a href="#">Вакансии</a></li>
-									<li class="main-nav__menu-item"><a href="#">Контакты</a></li>
+									<li class="menu-item"><a href="#">Скидки и акции</a></li>
+									<li class="menu-item"><a href="#">Портфолио и отзывы</a></li>
+									<li class="menu-item"><a href="#">Вакансии</a></li>
+									<li class="menu-item"><a href="#">Контакты</a></li>
 								</ul>
 							</nav>
 						</div>
@@ -87,7 +87,7 @@
 			<section class="promo">
 				<div class="promo__container">
 					<div class="promo__content">
-						<h1 class="promo__title">Строительство домов под ключ</h1>
+						<h1 class="promo__title title">Строительство домов под ключ</h1>
 						<p class="promo__text">
 							При заказе строительства в Мовкве - цена проекта 0 руб
 						</p>
@@ -260,39 +260,27 @@
 			</section>
 			<section class="partners">
 				<div class="partners__container">
-					<h2 class="partners__title">Наши партнеры</h2>
+					<h2 class="partners__title title"><span>Наши</span> партнеры</h2>
 					<div class="partners__slider-wrapper">
 						<div class="partners__slider">
 							<div class="partners__swiper">
 								<div class="partners__slide">
-									<img src="img/why-are-we/1.svg" alt="1">
+									<picture><source srcset="img/partners/1.webp" type="image/webp"><img src="img/partners/1.jpg" alt="1"></picture>
 								</div>
 								<div class="partners__slide">
-									<img src="img/why-are-we/1.svg" alt="1">
+									<picture><source srcset="img/partners/2.webp" type="image/webp"><img src="img/partners/2.png" alt="1"></picture>
 								</div>
 								<div class="partners__slide">
-									<img src="img/why-are-we/2.svg" alt="1">
+									<picture><source srcset="img/partners/3.webp" type="image/webp"><img src="img/partners/3.png" alt="1"></picture>
 								</div>
 								<div class="partners__slide">
-									<img src="img/why-are-we/3.svg" alt="1">
+									<picture><source srcset="img/partners/4.webp" type="image/webp"><img src="img/partners/4.jpg" alt="1"></picture>
 								</div>
 								<div class="partners__slide">
-									<img src="img/why-are-we/4.svg" alt="1">
+									<picture><source srcset="img/partners/1.webp" type="image/webp"><img src="img/partners/1.jpg" alt="1"></picture>
 								</div>
 								<div class="partners__slide">
-									<img src="img/why-are-we/5.svg" alt="1">
-								</div>
-								<div class="partners__slide">
-									<img src="img/why-are-we/6.svg" alt="1">
-								</div>
-								<div class="partners__slide">
-									<img src="img/why-are-we/1.svg" alt="1">
-								</div>
-								<div class="partners__slide">
-									<img src="img/why-are-we/2.svg" alt="1">
-								</div>
-								<div class="partners__slide">
-									<img src="img/why-are-we/3.svg" alt="1">
+									<picture><source srcset="img/partners/2.webp" type="image/webp"><img src="img/partners/2.png" alt="1"></picture>
 								</div>
 							</div>
 						</div>
@@ -310,7 +298,7 @@
 			</section>
 			<section class="example">
 				<div class="example__container">
-					<h2 class="example__title">Примеры выполненных работ по бурению</h2>
+					<h2 class="example__title title"><span>Примеры</span> выполненных работ по бурению</h2>
 					<div class="example__gallery gallery" data-gallery>
 						<div class="gallery__item item-gallery">
 							<a class="item-gallery__link item-gallery__link-ibg" href="img/gallery/1.jpg">
@@ -389,7 +377,7 @@
 			</section>
 			<section class="questions">
 				<div class="questions__container">
-					<h2 class="questions__title">Часто задаваемые вопросы по газификации</h2>
+					<h2 class="questions__title title">Часто задаваемые вопросы по газификации</h2>
 					<div class="questions__spoilers" data-spollers data-one-spoller>
 						<div class="questions__spoiler spoiler">
 							<h3 class="spoiler__title" data-spoller>
@@ -514,7 +502,7 @@
 			<div class="map">
 				<div class="map__container">
 					<div class="map__contacts contacts-map">
-						<h2 class="contacts-map__title">Наши контакты</h2>
+						<h2 class="contacts-map__title title">Наши контакты</h2>
 						<div class="contacts-map__body">
 							<div class="contacts-map__item">
 								<span class="contacts-map__name">
@@ -539,9 +527,7 @@
 						</div>
 					</div>
 				</div>
-				<div class="map__body">
-					<iframe src="https://yandex.ru/map-widget/v1/?um=constructor%3Ad4dd102f28505ad31b33e619fdf799b0a77bcb3c54f9d6b1c2b5dfe451bd0cf2&amp;source=constructor" width="100%" height="550" frameborder="0"></iframe>
-				</div>
+				<div id="map" class="map__body"></div>
 			</div>
 		</main>
 		<footer class="footer">
@@ -582,10 +568,10 @@
 				<div class="footer__contacts">
 					<a href="tel:+74951284644" class="footer__phone-number phone-number">+7 495 128 46 44</a>
 					<a href="mailto:info@infodomen.ru" class="footer__email email">info@infodomen.ru</a>
-					<a href="#" class="button button_colored">Заказать отбратный звонок</a>
 				</div>
 			</div>
 		</footer>
+		<script src="https://api-maps.yandex.ru/2.1/?apikey=584eb019-088e-4cab-91ad-73a616810646&lang=ru_RU&_v=20230611131451"></script>
 	</div>
 	<!-- 
 <div id="popup" aria-hidden="true" class="popup">
@@ -599,8 +585,7 @@
 </div>
  -->
 
-	<script src="js/app.min.js?_v=20230611093059"></script>
-	<!-- <script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU&_v=20230611093059" type="text/javascript"></script> -->
+	<script src="js/app.min.js?_v=20230611131451"></script>
 </body>
 
 </html>
