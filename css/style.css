@@ -1,4 +1,74 @@
 @charset "UTF-8";
+@font-face {
+  font-family: icons;
+  font-display: swap;
+  src: url("../fonts/icons.woff2") format("woff2"), url("../fonts/icons.woff") format("woff");
+  font-weight: 400;
+  font-style: normal;
+}
+.get-specialist::after, .main-nav .menu-item.menu-item-has-children > a::after, [class*=_icon-]:before {
+  font-family: "icons";
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+[class*=_icon-]:before {
+  display: block;
+}
+
+._icon-arrow:before {
+  content: "\e900";
+}
+
+._icon-builder:before {
+  content: "\e901";
+}
+
+._icon-close:before {
+  content: "\e902";
+}
+
+._icon-home:before {
+  content: "\e903";
+}
+
+._icon-letter:before {
+  content: "\e904";
+}
+
+._icon-location:before {
+  content: "\e905";
+}
+
+._icon-phone:before {
+  content: "\e906";
+}
+
+._icon-p-left:before {
+  content: "\e907";
+}
+
+._icon-plus-circled:before {
+  content: "\e908";
+}
+
+._icon-p-right:before {
+  content: "\e909";
+}
+
+._icon-smartphone:before {
+  content: "\e90a";
+}
+
+._icon-time:before {
+  content: "\e90b";
+}
+
 :root {
   --main-color-text: #1b1b1b;
   --accent-color: #00BFFF;
@@ -125,6 +195,7 @@ h6 {
 
 .button {
   display: inline-flex;
+  flex-direction: row-reverse;
   justify-content: center;
   align-items: center;
   column-gap: 15px;
@@ -135,6 +206,9 @@ h6 {
   box-shadow: 0 9px 5px -6px #7d736d;
   height: 50px;
   transition: all 0.3s ease 0s;
+}
+.button::before {
+  font-size: 22px;
 }
 @media (hover: hover) {
   .button:hover {
@@ -335,17 +409,22 @@ h5 {
   font-size: 1.4rem;
   column-gap: 10px;
   font-weight: 700;
-}
-.contact__phone-number img {
-  width: 15px;
+  display: inline-flex;
+  align-items: center;
 }
 @media (min-width: 37.18625em) {
   .contact__phone-number {
     font-size: 2rem;
     column-gap: 10px;
   }
-  .contact__phone-number img {
-    width: 25px;
+}
+.contact__phone-number::before {
+  font-size: 17px;
+  color: var(--accent-color);
+}
+@media (min-width: 37.18625em) {
+  .contact__phone-number::before {
+    font-size: 24px;
   }
 }
 .contact__time {
@@ -452,11 +531,32 @@ h5 {
 .main-nav .menu-item.menu-item-has-children > a {
   display: flex;
   justify-content: space-between;
+  align-items: center;
   flex-wrap: wrap;
 }
-.main-nav .menu-item.menu-item-has-children > a img {
-  width: 20px;
-  height: 20px;
+@media (min-width: 1200px) {
+  .main-nav .menu-item.menu-item-has-children > a {
+    align-items: flex-end;
+  }
+}
+.main-nav .menu-item.menu-item-has-children > a::after {
+  content: "\e900";
+  font-size: 24px;
+  transform: rotate(-90deg);
+}
+@media (max-width: 1199px) {
+  .main-nav .menu-item.menu-item-has-children > a::after {
+    transition: all 0.3s ease 0s;
+  }
+}
+@media (min-width: 1200px) {
+  .main-nav .menu-item.menu-item-has-children > a::after {
+    font-size: 17px;
+    transform: rotate(0);
+  }
+}
+.main-nav .menu-item.menu-item-has-children > a._spoller-active::after {
+  transform: rotate(0);
 }
 @media (min-width: 1200px) and (hover: hover) {
   .main-nav .menu-item.menu-item-has-children > a:hover + .sub-menu {
@@ -521,9 +621,15 @@ h5 {
   color: var(--accent-color);
   column-gap: 8px;
 }
+.get-specialist::after {
+  content: "\e901";
+  transition: transform 0.3s ease 0s;
+  font-size: 25px;
+}
 .get-specialist span {
   display: inline-block;
   border-bottom: 1px dotted var(--accent-color);
+  transition: all 0.3s ease 0s;
 }
 @media (min-width: 29.99875em) {
   .get-specialist {
@@ -1056,17 +1162,17 @@ h5 {
   transform: translateY(-50%);
 }
 
-.navigation {
+.navigation-slider {
   display: flex;
   justify-content: space-between;
   pointer-events: none;
 }
 @media (min-width: 47.99875em) {
-  .navigation {
+  .navigation-slider {
     padding: 0 40px;
   }
 }
-.navigation__button {
+.navigation-slider__button {
   width: 40px;
   height: 40px;
   border-radius: 50%;
@@ -1080,17 +1186,17 @@ h5 {
   pointer-events: visible;
 }
 @media (hover: hover) {
-  .navigation__button:hover {
+  .navigation-slider__button:hover {
     box-shadow: 0 8px 9px -3px #7d736d;
   }
 }
-.navigation__button img {
+.navigation-slider__button img {
   width: 24px;
 }
-.navigation__button_prev img {
+.navigation-slider__button_prev img {
   transform: rotate(90deg);
 }
-.navigation__button_next img {
+.navigation-slider__button_next img {
   transform: rotate(-90deg);
 }
 
@@ -1156,7 +1262,7 @@ h5 {
   left: 0;
   width: 100%;
   height: 100%;
-  background: hsla(0, 0%, 100%, 0.9);
+  background: hsla(0, 0%, 0%, 0.3);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -1316,11 +1422,12 @@ h5 {
   font-size: 1.8rem;
   position: relative;
 }
-.contacts-map__name img {
+.contacts-map__name::before {
   width: 15px;
   position: absolute;
   left: -30px;
-  top: 4px;
+  top: 2px;
+  color: var(--accent-color);
 }
 .swiper-horizontal {
   touch-action: pan-y;

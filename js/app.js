@@ -3209,8 +3209,8 @@
           spaceBetween: 0,
           speed: 800,
           navigation: {
-            prevEl: ".partners__navigation .navigation__button_prev",
-            nextEl: ".partners__navigation .navigation__button_next",
+            prevEl: ".partners__navigation .navigation-slider__button_prev",
+            nextEl: ".partners__navigation .navigation-slider__button_next",
           },
           breakpoints: {
             0: { slidesPerView: 1, spaceBetween: 0 },
