@@ -1,0 +1,46 @@
+// Заголовки, общие БЄМ блоки и проче...
+h1 {
+  font-size: 3rem;
+  font-weight: 700;
+  @media (min-width:$mobile){
+    font-size: 4rem;
+  }
+}
+
+h2 {
+  font-size: 2.7rem;
+  font-weight: 700;
+  @media (min-width:$mobile){
+    font-size: 3.5rem;
+  }
+}
+
+h4 {
+  font-size: 1.8rem;
+  font-weight: 700;
+  @media (min-width:$mobile){
+    font-size: 2.3rem;
+  }
+}
+
+h5 {
+  font-size: 1.6rem;
+  font-weight: 700;
+  @media (min-width:$mobile){
+    font-size: 1.8rem;
+  }
+}
+
+
+.title {
+  text-transform: uppercase;
+  span {
+    color: var(--accent-color);
+  }
+}
+
+
+.email {
+  font-size: 2.3rem;
+  font-weight: 700;
+}

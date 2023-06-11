@@ -1,0 +1,119 @@
+//====================================================================================================
+.footer {
+  padding: 60px 0;
+  background-color: #222427;
+  color: var(--light-color);
+  // .footer__container
+
+  &__container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    row-gap: 40px;
+    column-gap: 20px;
+    grid-template-areas: "logo logo" "contacts contacts" "menu-1 menu-2" ;
+    justify-items: center;
+    @media (min-width:$tablet){
+      grid-template-areas: "logo logo logo" "menu-1 menu-2 contacts";
+      grid-template-columns: 1fr 1fr 1fr;
+      column-gap: 30px;
+    }
+    @media (min-width: 1200px){
+      grid-template-areas: "logo menu-1 menu-2 contacts";
+      grid-template-columns: repeat(4, 1fr);
+    }
+  }
+
+  // .footer__column
+  // &__column {
+  //   flex-basis: 2;
+  // }
+
+  // .footer__logo
+  &__logo {
+    grid-area: logo;
+    text-align: center;
+    @media (min-width: 1200px){
+      text-align: left; 
+    }
+  }
+
+  // .footer__menu-1
+  &__menu-1 {
+    grid-area: menu-1;
+  }
+
+  // .footer__menu-1
+  &__menu-2 {
+    grid-area: menu-2;
+  }
+
+  // .footer__contacts
+  &__contacts {
+    grid-area: contacts;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  // .footer__title
+  &__title {
+    text-transform: uppercase;
+    margin-bottom: 20px;
+    &:nth-child(2) {
+      margin-top: 20px;
+    }
+  }
+
+  // .footer__list
+  &__list {
+    &:not(:last-child) {
+      margin-bottom: 35px;
+    }
+    li {
+      &:not(:last-child) {
+        margin-bottom: 15px;
+      }
+    }
+  }
+
+  // .footer__sub-list
+  &__sub-list {
+    margin-top: 15px;
+    margin-bottom: 35px;
+    color: var(--color-gray);
+    li {
+      position: relative;
+      padding-left: 20px;
+      &:before {
+        content: '';
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        left: 0;
+        background: #E93935;
+        width: 4px;
+        height: 4px;
+      }
+    }
+  }
+
+  &__phone-number,
+  &__email {
+    display: inline-block;
+  }
+
+  // .footer__phone-number
+  &__phone-number {
+    font-size: 2.5rem;
+		font-weight: 600;
+    margin-bottom: 20px;
+  }
+
+  // .footer__email
+  &__email {
+    margin-bottom: 30px;
+  }
+
+
+}
+//====================================================================================================
