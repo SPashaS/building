@@ -3213,7 +3213,7 @@
             nextEl: ".partners__navigation .navigation__button_next",
           },
           breakpoints: {
-            0: { slidesPerView: 1, spaceBetween: 0, autoHeight: !0 },
+            0: { slidesPerView: 1, spaceBetween: 0 },
             478: { slidesPerView: 2, spaceBetween: 10 },
             768: { slidesPerView: 3, spaceBetween: 20 },
             992: { slidesPerView: 4, spaceBetween: 20 },
@@ -5564,7 +5564,7 @@
         {},
         {
           iconLayout: "default#image",
-          iconImageHref: "../../img/location.png",
+          iconImageHref: "../img/location.png",
           iconImageSize: [80, 80],
           iconImageOffset: [-40, -70],
         }
