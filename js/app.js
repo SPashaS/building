@@ -5542,9 +5542,9 @@
     },
     je = document.querySelectorAll("[data-gallery]");
   if (je.length) {
-    let t = [];
+    let Re = [];
     je.forEach((e) => {
-      t.push({
+      Re.push({
         gallery: e,
         galleryClass: We(e, {
           selector: ".item-gallery__link",
@@ -5554,29 +5554,32 @@
         }),
       });
     }),
-      (e.gallery = t);
+      (e.gallery = Re);
   }
-  let Re = [59.91064056419415, 30.26740399999999];
-  ymaps.ready(function () {
-    let e = new ymaps.Map("map", { center: Re, zoom: 16 }),
-      t = new ymaps.Placemark(
-        Re,
-        {},
-        {
-          iconLayout: "default#image",
-          iconImageHref: "img/location.png",
-          iconImageSize: [80, 80],
-          iconImageOffset: [-40, -70],
-        }
-      );
-    e.controls.remove("geolocationControl"),
-      e.controls.remove("searchControl"),
-      e.controls.remove("trafficControl"),
-      e.controls.remove("typeSelector"),
-      e.controls.remove("fullscreenControl"),
-      e.geoObjects.add(t);
-  }),
-    (window.FLS = !0),
+  if (document.getElementById("map")) {
+    let Ye = [59.91064056419415, 30.26740399999999];
+    function qe() {
+      let e = new ymaps.Map("map", { center: Ye, zoom: 16 }),
+        t = new ymaps.Placemark(
+          Ye,
+          {},
+          {
+            iconLayout: "default#image",
+            iconImageHref: "img/location.png",
+            iconImageSize: [80, 80],
+            iconImageOffset: [-40, -70],
+          }
+        );
+      e.controls.remove("geolocationControl"),
+        e.controls.remove("searchControl"),
+        e.controls.remove("trafficControl"),
+        e.controls.remove("typeSelector"),
+        e.controls.remove("fullscreenControl"),
+        e.geoObjects.add(t);
+    }
+    ymaps.ready(qe);
+  }
+  (window.FLS = !0),
     (function (e) {
       let t = new Image();
       (t.onload = t.onerror =
