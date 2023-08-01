@@ -1012,6 +1012,7 @@ h5 {
 @media (min-width: 37.18625em) {
   .promo {
     background-image: url("../img/promo.jpg");
+    background-size: cover;
     background-position: center bottom;
     background-repeat: no-repeat;
     padding: 180px 0;
@@ -1035,13 +1036,21 @@ h5 {
 .promo__title {
   margin-bottom: 40px;
   max-width: 500px;
-  color: #ffffff;
+}
+@media (min-width: 37.18625em) {
+  .promo__title {
+    color: #ffffff;
+  }
 }
 .promo__text {
   margin-bottom: 40px;
   max-width: 300px;
-  color: #ffffff;
   font-weight: 600;
+}
+@media (min-width: 37.18625em) {
+  .promo__text {
+    color: #ffffff;
+  }
 }
 .promo__buttons {
   display: flex;
