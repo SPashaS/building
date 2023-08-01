@@ -940,6 +940,11 @@ h5 {
     text-align: left;
   }
 }
+@media (max-width: 37.18625em) {
+  .footer__logo .logo img {
+    width: 210px;
+  }
+}
 .footer__menu-1 {
   grid-area: menu-1;
 }
@@ -1647,6 +1652,18 @@ h5 {
 }
 .documents__gallery .item-gallery__link {
   padding-bottom: 125%;
+}
+
+.portfolio {
+  padding: var(--section-padding);
+}
+.portfolio__title {
+  margin-bottom: var(--margin-bottom-s);
+}
+@media (min-width: 37.18625em) {
+  .portfolio__title {
+    margin-bottom: var(--margin-bottom);
+  }
 }
 .swiper-horizontal {
   touch-action: pan-y;
