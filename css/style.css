@@ -85,12 +85,12 @@
 
 :root {
   --main-color-text: #1b1b1b;
-  --accent-color: #00BFFF;
-  --second-color: #000080;
+  --accent-color: #fab62e;
+  --second-color: #2e8070;
   --light-color: #ffffff;
   --color-light-gray: #f7f7f7;
   --color-gray: #bebebe;
-  --accent-gradient: linear-gradient(270deg,#00BFFF 0,#000080 100%);
+  --accent-gradient: linear-gradient(270deg,#2e8070 0,#094238 100%);
   --section-padding: 80px 0 80px;
   --section-padding-s: 40px 0 40px;
   --margin-bottom: 40px;
@@ -316,7 +316,7 @@ h5 {
   text-transform: uppercase;
 }
 .title span {
-  color: var(--accent-color);
+  color: var(--second-color);
 }
 
 .email {
@@ -1248,7 +1248,7 @@ h5 {
   transition: all 0.3s ease 0s;
 }
 .we-offer-item__desc {
-  background-color: var(--accent-color);
+  background-color: var(--second-color);
   color: var(--light-color);
   padding: 10px;
   text-align: center;
@@ -1503,11 +1503,11 @@ h5 {
 .spoiler__title {
   padding: 5px 0 25px;
   font-weight: 700;
-  color: var(--accent-color);
+  color: var(--second-color);
   cursor: pointer;
 }
 .spoiler__title span {
-  border-bottom: 2px dotted var(--accent-color);
+  border-bottom: 2px dotted var(--second-color);
   transition: all 0.3s ease 0s;
 }
 @media (hover: hover) {
